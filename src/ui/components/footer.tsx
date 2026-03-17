@@ -10,16 +10,16 @@ import { Logo } from "./shared/logo";
 // Default footer links when no CMS data is available
 const defaultFooterLinks = {
 	support: [
-		{ label: "Contact Us", href: "/contact" },
-		{ label: "FAQs", href: "/faq" },
-		{ label: "Shipping", href: "/shipping" },
-		{ label: "Returns", href: "/returns" },
+		{ label: "Kontaktujte nás", href: "/contact" },
+		{ label: "Časté dotazy", href: "/faq" },
+		{ label: "Doprava", href: "/shipping" },
+		{ label: "Vrácení zboží", href: "/returns" },
 	],
 	company: [
-		{ label: "About", href: "/about" },
-		{ label: "Sustainability", href: "/sustainability" },
-		{ label: "Careers", href: "/careers" },
-		{ label: "Press", href: "/press" },
+		{ label: "O nás", href: "/about" },
+		{ label: "Ochrana osobních údajů", href: "/privacy" },
+		{ label: "Obchodní podmínky", href: "/terms" },
+		{ label: "Blog", href: "/blog" },
 	],
 };
 
@@ -72,7 +72,7 @@ export async function Footer({ channel }: { channel: string }) {
 							<Logo className="h-7 w-auto" inverted />
 						</Link>
 						<p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
-							Minimal design, maximum impact. Thoughtfully crafted essentials for everyday comfort.
+							Čerstvé květiny a rostliny od lokálních pěstitelů. Doručení po celé ČR.
 						</p>
 					</div>
 
@@ -144,7 +144,7 @@ export async function Footer({ channel }: { channel: string }) {
 					{menuItems.length === 0 && (
 						<>
 							<div>
-								<h4 className="mb-4 text-sm font-medium text-neutral-300">Support</h4>
+								<h4 className="mb-4 text-sm font-medium text-neutral-300">Podpora</h4>
 								<ul className="space-y-3">
 									{defaultFooterLinks.support.map((link) => (
 										<li key={link.href}>
@@ -160,7 +160,7 @@ export async function Footer({ channel }: { channel: string }) {
 								</ul>
 							</div>
 							<div>
-								<h4 className="mb-4 text-sm font-medium text-neutral-300">Company</h4>
+								<h4 className="mb-4 text-sm font-medium text-neutral-300">Firma</h4>
 								<ul className="space-y-3">
 									{defaultFooterLinks.company.map((link) => (
 										<li key={link.href}>
@@ -183,7 +183,7 @@ export async function Footer({ channel }: { channel: string }) {
 				{channels?.channels && (
 					<div className="mt-8 text-neutral-400">
 						<label className="flex items-center gap-2 text-sm">
-							<span>Change currency:</span>
+							<span>Změnit měnu:</span>
 							<ChannelSelect channels={channels.channels} />
 						</label>
 					</div>
@@ -200,14 +200,14 @@ export async function Footer({ channel }: { channel: string }) {
 							prefetch={false}
 							className="text-xs text-neutral-500 transition-colors hover:text-neutral-300"
 						>
-							Privacy Policy
+							Ochrana osobních údajů
 						</Link>
 						<Link
 							href="/terms"
 							prefetch={false}
 							className="text-xs text-neutral-500 transition-colors hover:text-neutral-300"
 						>
-							Terms of Service
+							Obchodní podmínky
 						</Link>
 					</div>
 				</div>

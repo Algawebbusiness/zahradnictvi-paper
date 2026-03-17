@@ -1,61 +1,31 @@
 /**
- * Shared Logo Component
+ * Shared Logo Component — Zahradnictví Hnojice
  *
- * Single source of truth for the storefront logo.
- * Uses external SVG files for better caching and smaller bundle size.
- *
- * - /public/logo.svg: dark logo for light backgrounds
- * - /public/logo-dark.svg: light logo for dark backgrounds
- *
- * @example
- * <Logo className="h-7 w-auto" />                    // Header (auto light/dark)
- * <Logo className="h-7 w-auto" inverted />          // Footer (inverted for dark bg)
+ * Text-based decorative logo with flower icon.
+ * Matches the original zahradnictví design: ZA ✿ HRADNICTVÍ / NOJICE
  */
+
+import { Flower2 } from "lucide-react";
 
 interface LogoProps {
 	className?: string;
-	/** Accessible label for the logo */
 	ariaLabel?: string;
-	/** Invert colors (for dark backgrounds like footer) */
 	inverted?: boolean;
 }
 
-/**
- * Paper + Saleor combined logo (100x23, aspect ratio ~4.35:1)
- * Automatically switches between light/dark mode versions.
- *
- * Uses explicit width/height + aspect-ratio to prevent CLS while
- * allowing flexible sizing via className.
- */
-export const Logo = ({ className, ariaLabel = "Paper by Saleor", inverted = false }: LogoProps) => {
-	// When inverted, swap the light/dark mode logic
-	const lightModeLogo = inverted ? "/logo-dark.svg" : "/logo.svg";
-	const darkModeLogo = inverted ? "/logo.svg" : "/logo-dark.svg";
-
-	// Base styles: preserve aspect ratio to prevent CLS
-	// Height classes (e.g., h-7) will work correctly with w-auto
-	const baseStyles = "aspect-[100/23]";
+export const Logo = ({ className = "", ariaLabel = "Zahradnictví Hnojice", inverted = false }: LogoProps) => {
+	const textColor = inverted ? "text-white" : "text-foreground dark:text-white";
+	const flowerColor = inverted ? "text-pink-300" : "text-pink-500 dark:text-pink-400";
 
 	return (
-		<>
-			{/* Light mode */}
-			{/* eslint-disable-next-line @next/next/no-img-element */}
-			<img
-				src={lightModeLogo}
-				alt={ariaLabel}
-				width={100}
-				height={23}
-				className={`dark:hidden ${baseStyles} ${className ?? ""}`}
-			/>
-			{/* Dark mode */}
-			{/* eslint-disable-next-line @next/next/no-img-element */}
-			<img
-				src={darkModeLogo}
-				alt={ariaLabel}
-				width={100}
-				height={23}
-				className={`hidden dark:block ${baseStyles} ${className ?? ""}`}
-			/>
-		</>
+		<div className={`flex items-center gap-0.5 select-none ${className}`} aria-label={ariaLabel} role="img">
+			<span className={`text-sm font-bold tracking-tight ${textColor} sm:text-base`}>
+				ZA
+			</span>
+			<Flower2 className={`h-4 w-4 sm:h-5 sm:w-5 ${flowerColor}`} aria-hidden="true" />
+			<span className={`text-sm font-bold tracking-tight ${textColor} sm:text-base`}>
+				HRADNICTVÍ
+			</span>
+		</div>
 	);
 };
