@@ -1,0 +1,110 @@
+/**
+ * ========================================
+ * ZAHRADNICTVÍ HNOJICE - DESIGN TOKENS
+ * ========================================
+ *
+ * Flower shop theme: warm pinks, natural greens, cream backgrounds.
+ * Based on Paper template design token system (OKLCH).
+ *
+ * Color Format: OKLCH (Oklab Lightness Chroma Hue)
+ *
+ * Design System:
+ * - Warm floral theme with pink accents
+ * - Deep green for primary actions (natural/botanical feel)
+ * - Cream/warm off-whites for backgrounds
+ * - Pink hover effects on interactive elements
+ *
+ * Typography:
+ * - Inter font family (loaded via Next.js font system in layout.tsx)
+ */
+
+/* ============================================
+ * Light Theme (Default)
+ * ============================================ */
+:root {
+	/* --- Backgrounds --- */
+	--background: oklch(0.98 0.008 85); /* Page background - warm cream */
+	--card: oklch(1 0 0); /* Card surfaces - pure white */
+	--popover: oklch(1 0 0); /* Popover/dropdown backgrounds */
+	--secondary: oklch(0.96 0.006 85); /* Secondary surfaces - light cream */
+	--muted: oklch(0.94 0.005 85); /* Muted/disabled backgrounds */
+	--accent: oklch(0.93 0.04 350); /* Accent backgrounds - very light pink */
+
+	/* --- Foregrounds (Text Colors) --- */
+	--foreground: oklch(0.18 0.02 150); /* Primary text - deep botanical green-black */
+	--card-foreground: oklch(0.18 0.02 150);
+	--popover-foreground: oklch(0.18 0.02 150);
+	--secondary-foreground: oklch(0.18 0.02 150);
+	--muted-foreground: oklch(0.45 0.01 150); /* Secondary/muted text */
+	--accent-foreground: oklch(0.18 0.02 150);
+
+	/* --- Primary (CTA buttons, links) --- */
+	--primary: oklch(0.40 0.10 150); /* Deep botanical green */
+	--primary-foreground: oklch(0.98 0 0); /* White text on primary */
+
+	/* --- Semantic Colors --- */
+	--destructive: oklch(0.55 0.2 25); /* Error/delete - red */
+	--destructive-foreground: oklch(0.98 0 0);
+	--success: oklch(0.55 0.15 145); /* Success - green */
+	--success-foreground: oklch(0.98 0 0);
+
+	/* --- Interactive Elements --- */
+	--border: oklch(0.90 0.005 85); /* Border color - warm */
+	--input: oklch(0.90 0.005 85); /* Input borders */
+	--ring: oklch(0.65 0.15 350); /* Focus ring color - pink */
+
+	/* --- Layout --- */
+	--radius: 0.625rem; /* Base border radius (10px) - slightly more rounded */
+
+	/* --- Skeleton Delay --- */
+	--skeleton-delay: 300ms;
+}
+
+/* ============================================
+ * Delayed Skeleton Animation
+ * ============================================ */
+@keyframes skeleton-fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ============================================
+ * Dark Theme
+ * Activated by adding .dark class to <html>
+ * ============================================ */
+.dark {
+	/* --- Backgrounds --- */
+	--background: oklch(0.14 0.01 150);
+	--card: oklch(0.18 0.01 150);
+	--popover: oklch(0.18 0.01 150);
+	--secondary: oklch(0.22 0.005 150);
+	--muted: oklch(0.22 0.005 150);
+	--accent: oklch(0.22 0.03 350);
+
+	/* --- Foregrounds --- */
+	--foreground: oklch(0.96 0.005 85);
+	--card-foreground: oklch(0.96 0.005 85);
+	--popover-foreground: oklch(0.96 0.005 85);
+	--secondary-foreground: oklch(0.96 0.005 85);
+	--muted-foreground: oklch(0.65 0.005 85);
+	--accent-foreground: oklch(0.96 0.005 85);
+
+	/* --- Primary --- */
+	--primary: oklch(0.65 0.12 150); /* Brighter green for dark mode */
+	--primary-foreground: oklch(0.12 0 0);
+
+	/* --- Semantic Colors --- */
+	--destructive: oklch(0.45 0.18 25);
+	--destructive-foreground: oklch(0.98 0 0);
+	--success: oklch(0.65 0.15 145);
+	--success-foreground: oklch(0.12 0 0);
+
+	/* --- Interactive Elements --- */
+	--border: oklch(0.28 0.01 150);
+	--input: oklch(0.28 0.01 150);
+	--ring: oklch(0.70 0.15 350); /* Pink focus ring */
+}
