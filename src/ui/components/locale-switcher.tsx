@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+// TODO: Implement locale switching with custom i18n provider
 import { type Locale, locales } from "@/i18n/config";
 
 const localeLabels: Record<Locale, string> = {
@@ -10,7 +10,9 @@ const localeLabels: Record<Locale, string> = {
 };
 
 export function LocaleSwitcher() {
-	const locale = useLocale() as Locale;
+	const locale: Locale = (typeof document !== "undefined"
+		? (document.cookie.match(/NEXT_LOCALE=(\w+)/)?.[1] as Locale)
+		: undefined) ?? "cs";
 	const router = useRouter();
 
 	const handleChange = (newLocale: Locale) => {

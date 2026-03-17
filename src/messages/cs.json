@@ -132,9 +132,9 @@
 	},
 	"search": {
 		"placeholder": "Hledat produkty...",
-		"resultsFor": "Výsledky pro „{query}"",
+		"resultsFor": "Výsledky pro \u201E{query}\u201C",
 		"productsFound": "{count, plural, one {# produkt} few {# produkty} other {# produktů}} nalezeno",
-		"noResults": "Žádné výsledky pro „{query}"",
+		"noResults": "Žádné výsledky pro \u201E{query}\u201C",
 		"noResultsDescription": "Nepodařilo se najít žádné produkty odpovídající vašemu hledání. Zkuste jiný výraz nebo procházejte naše kategorie.",
 		"browseAll": "Zobrazit všechny produkty",
 		"goToHomepage": "Přejít na hlavní stránku"
@@ -362,5 +362,95 @@
 		"previous": "Předchozí",
 		"next": "Další",
 		"page": "Strana {page} z {total}"
+	},
+	"hero": {
+		"deliverJoy": "Doručujeme radost",
+		"fragrantLilies": "Voňavé konvalinky až k vašim dveřím",
+		"viewLilies": "Podívat se na konvalinky",
+		"funeralArrangements": "Smuteční vazba podle vašeho přání",
+		"browseOffer": "Prohlédnout nabídku",
+		"specialOccasions": "Speciální příležitosti",
+		"surpriseLovedOnes": "Překvapte své blízké",
+		"bloomMonuments": "Rozkveteme památky",
+		"discoverFloristry": "Objevit floristiku"
+	},
+	"categories": {
+		"shopByCategory": "Nakupovat podle kategorie",
+		"lilies": "Konvalinky",
+		"houseplants": "Pokojovky",
+		"gifts": "Dárky",
+		"special": "Speciální"
+	},
+	"occasions": {
+		"shopByOccasion": "Nakupovat podle příležitosti",
+		"wedding": "Svatba",
+		"birthday": "Narozeniny",
+		"anniversary": "Výročí",
+		"sympathy": "Smuteční"
+	},
+	"faq": {
+		"title": "Často kladené otázky",
+		"delivery": {
+			"question": "Jak rychle doručujete?",
+			"answer": "Objednávky přijaté do 14:00 doručujeme ve stejný den po Olomouci a okolí. Pro ostatní lokality 1-2 pracovní dny."
+		},
+		"freshness": {
+			"question": "Jak zaručujete čerstvost květin?",
+			"answer": "Všechny květiny nakupujeme přímo od pěstitelů a zpracováváme v den dodání. Garantujeme čerstvost minimálně 7 dní."
+		},
+		"returns": {
+			"question": "Mohu květiny vrátit?",
+			"answer": "Pokud nejste spokojeni s kvalitou, kontaktujte nás do 24 hodin od doručení a vyřešíme to — výměnou nebo vrácením peněz."
+		},
+		"payment": {
+			"question": "Jaké způsoby platby přijímáte?",
+			"answer": "Přijímáme platební karty, bankovní převod a platbu na dobírku. Vše je zabezpečeno SSL šifrováním."
+		},
+		"custom": {
+			"question": "Můžete vytvořit kytici na zakázku?",
+			"answer": "Samozřejmě! Kontaktujte nás s vašimi představami a my vytvoříme kytici přesně podle vašeho přání."
+		}
+	},
+	"testimonials": {
+		"title": "Spokojení zákazníci",
+		"review1": {
+			"name": "Marie Nováková",
+			"review": "Krásné čerstvé květiny, rychlé doručení. Objednávám pravidelně a nikdy jsem nebyla zklamaná."
+		},
+		"review2": {
+			"name": "Jan Dvořák",
+			"review": "Překvapil jsem manželku kyticí k výročí. Byla nadšená! Květiny vydržely přes týden."
+		},
+		"review3": {
+			"name": "Petra Svobodová",
+			"review": "Smuteční vazba byla nádherná a důstojná. Děkuji za citlivý přístup a rychlé vyřízení."
+		}
+	},
+	"about": {
+		"title": "O Zahradnictví Hnojice",
+		"description": "Jsme rodinné zahradnictví s dlouholetou tradicí. Pěstujeme a aranžujeme květiny s láskou a péčí, abychom vám přinesli radost do každého dne.",
+		"learnMore": "Zjistit více",
+		"localGrower": "Lokální pěstitel",
+		"localGrowerDesc": "Vlastní skleníky a zahrady",
+		"location": "Hnojice",
+		"locationRegion": "Olomoucký kraj",
+		"openingHours": "Otevírací doba",
+		"openingHoursValue": "Po-Pá 8:00-17:00",
+		"contact": "Kontakt",
+		"contactValue": "+420 585 123 456"
+	},
+	"trustBadges": {
+		"sameDayDelivery": "Doručení ve stejný den",
+		"ordersBefore14": "Objednávky do 14:00",
+		"freshnessGuarantee": "Záruka čerstvosti",
+		"satisfactionGuaranteed": "100% spokojení garantováno",
+		"securePayment": "Bezpečná platba",
+		"sslEncryption": "SSL šifrování",
+		"support247": "Podpora 24/7",
+		"hereForYou": "Jsme tu pro vás"
+	},
+	"home": {
+		"featured": "Doporučujeme",
+		"viewAll": "Zobrazit vše"
 	}
 }

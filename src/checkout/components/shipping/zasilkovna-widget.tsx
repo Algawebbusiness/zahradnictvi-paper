@@ -3,7 +3,7 @@
 import { useEffect, useRef, type FC } from "react";
 import { MapPin } from "lucide-react";
 import { Button } from "@/ui/components/ui/button";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/lib/i18n";
 
 interface ZasilkovnaWidgetProps {
 	apiKey: string;

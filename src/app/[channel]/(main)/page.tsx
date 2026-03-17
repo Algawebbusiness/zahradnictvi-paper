@@ -3,19 +3,20 @@ import { cacheLife, cacheTag } from "next/cache";
 import { ProductListByCollectionDocument, ProductOrderField, OrderDirection } from "@/gql/graphql";
 import { executePublicGraphQL } from "@/lib/graphql";
 import { ProductList } from "@/ui/components/product-list";
+import { brandConfig } from "@/config/brand";
+import { HeroBanner } from "@/ui/components/home/hero-banner";
+import { QuickCategoryAccess } from "@/ui/components/home/quick-category-access";
+import { OccasionsSection } from "@/ui/components/home/occasions-section";
+import { FAQSection } from "@/ui/components/home/faq-section";
+import { TestimonialsSection } from "@/ui/components/home/testimonials-section";
+import { AboutSection } from "@/ui/components/home/about-section";
+import { TrustBadges } from "@/ui/components/home/trust-badges";
 
 export const metadata = {
-	title: "ACME Storefront, powered by Saleor & Next.js",
-	description:
-		"Storefront Next.js Example for building performant e-commerce experiences with Saleor - the composable, headless commerce platform for global brands.",
+	title: brandConfig.siteName,
+	description: brandConfig.description,
 };
 
-/**
- * Cached function to fetch featured products.
- * Returns [] on failure so the page always renders (never null).
- * Note: the empty array IS cached for the cacheLife duration —
- * on-demand revalidation via cacheTag is the intended recovery path.
- */
 async function getFeaturedProducts(channel: string) {
 	"use cache";
 	cacheLife("minutes");
@@ -39,40 +40,59 @@ async function getFeaturedProducts(channel: string) {
 	return result.data.collection?.products?.edges.map(({ node }) => node) ?? [];
 }
 
-/**
- * Page shell — renders immediately with a static section wrapper.
- * The async product grid streams inside its own Suspense boundary
- * so it doesn't rely on the layout's main Suspense for reconciliation.
- */
+function ProductListSkeleton() {
+	return (
+		<ul role="list" className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+			{Array.from({ length: 8 }).map((_, i) => (
+				<li key={i} className="animate-pulse">
+					<div className="aspect-square overflow-hidden rounded-lg bg-secondary" />
+					<div className="mt-2 flex justify-between">
+						<div>
+							<div className="mt-1 h-4 w-32 rounded bg-secondary" />
+							<div className="mt-1 h-4 w-20 rounded bg-secondary" />
+						</div>
+						<div className="mt-1 h-4 w-16 rounded bg-secondary" />
+					</div>
+				</li>
+			))}
+		</ul>
+	);
+}
+
 export default function Page(props: { params: Promise<{ channel: string }> }) {
 	return (
-		<section className="mx-auto max-w-7xl p-8 pb-16">
-			<h2 className="sr-only">Product list</h2>
-			<Suspense
-				fallback={
-					<ul
-						role="list"
-						data-testid="ProductList"
-						className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-					>
-						{Array.from({ length: 12 }).map((_, i) => (
-							<li key={i} className="animate-pulse">
-								<div className="aspect-square overflow-hidden bg-secondary" />
-								<div className="mt-2 flex justify-between">
-									<div>
-										<div className="mt-1 h-4 w-32 rounded bg-secondary" />
-										<div className="mt-1 h-4 w-20 rounded bg-secondary" />
-									</div>
-									<div className="mt-1 h-4 w-16 rounded bg-secondary" />
-								</div>
-							</li>
-						))}
-					</ul>
-				}
-			>
-				<FeaturedProducts params={props.params} />
-			</Suspense>
-		</section>
+		<div className="min-h-screen pb-16">
+			{/* Hero Banner */}
+			<div className="px-4 pt-6">
+				<HeroBanner />
+			</div>
+
+			{/* Quick Category Access */}
+			<QuickCategoryAccess />
+
+			{/* Featured Products */}
+			<section className="mx-auto max-w-7xl px-4 py-8">
+				<h2 className="sr-only">Product list</h2>
+				<Suspense fallback={<ProductListSkeleton />}>
+					<FeaturedProducts params={props.params} />
+				</Suspense>
+			</section>
+
+			{/* Trust Badges */}
+			<TrustBadges />
+
+			{/* Shop by Occasion */}
+			<OccasionsSection />
+
+			{/* FAQ */}
+			<FAQSection />
+
+			{/* Testimonials */}
+			<TestimonialsSection />
+
+			{/* About */}
+			<AboutSection />
+		</div>
 	);
 }
 

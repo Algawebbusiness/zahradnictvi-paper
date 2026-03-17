@@ -362,5 +362,95 @@
 		"previous": "Previous",
 		"next": "Next",
 		"page": "Page {page} of {total}"
+	},
+	"hero": {
+		"deliverJoy": "We deliver joy",
+		"fragrantLilies": "Fragrant lilies of the valley to your door",
+		"viewLilies": "View lilies",
+		"funeralArrangements": "Funeral arrangements by your wish",
+		"browseOffer": "Browse offer",
+		"specialOccasions": "Special occasions",
+		"surpriseLovedOnes": "Surprise your loved ones",
+		"bloomMonuments": "We bloom monuments",
+		"discoverFloristry": "Discover floristry"
+	},
+	"categories": {
+		"shopByCategory": "Shop by category",
+		"lilies": "Lilies",
+		"houseplants": "Houseplants",
+		"gifts": "Gifts",
+		"special": "Special"
+	},
+	"occasions": {
+		"shopByOccasion": "Shop by occasion",
+		"wedding": "Wedding",
+		"birthday": "Birthday",
+		"anniversary": "Anniversary",
+		"sympathy": "Sympathy"
+	},
+	"faq": {
+		"title": "Frequently asked questions",
+		"delivery": {
+			"question": "How fast do you deliver?",
+			"answer": "Orders placed before 2 PM are delivered the same day in Olomouc area. Other locations 1-2 business days."
+		},
+		"freshness": {
+			"question": "How do you guarantee flower freshness?",
+			"answer": "All flowers are sourced directly from growers and processed on delivery day. We guarantee freshness for at least 7 days."
+		},
+		"returns": {
+			"question": "Can I return flowers?",
+			"answer": "If you are not satisfied with the quality, contact us within 24 hours of delivery and we will resolve it — exchange or refund."
+		},
+		"payment": {
+			"question": "What payment methods do you accept?",
+			"answer": "We accept credit cards, bank transfers and cash on delivery. Everything is secured with SSL encryption."
+		},
+		"custom": {
+			"question": "Can you create a custom bouquet?",
+			"answer": "Of course! Contact us with your ideas and we will create a bouquet exactly to your wishes."
+		}
+	},
+	"testimonials": {
+		"title": "Happy customers",
+		"review1": {
+			"name": "Marie Nováková",
+			"review": "Beautiful fresh flowers, fast delivery. I order regularly and have never been disappointed."
+		},
+		"review2": {
+			"name": "Jan Dvořák",
+			"review": "I surprised my wife with a bouquet for our anniversary. She was delighted! The flowers lasted over a week."
+		},
+		"review3": {
+			"name": "Petra Svobodová",
+			"review": "The funeral arrangement was beautiful and dignified. Thank you for the sensitive approach and quick handling."
+		}
+	},
+	"about": {
+		"title": "About Zahradnictví Hnojice",
+		"description": "We are a family garden center with a long tradition. We grow and arrange flowers with love and care to bring joy to your every day.",
+		"learnMore": "Learn more",
+		"localGrower": "Local grower",
+		"localGrowerDesc": "Our own greenhouses and gardens",
+		"location": "Hnojice",
+		"locationRegion": "Olomouc region",
+		"openingHours": "Opening hours",
+		"openingHoursValue": "Mon-Fri 8:00-17:00",
+		"contact": "Contact",
+		"contactValue": "+420 585 123 456"
+	},
+	"trustBadges": {
+		"sameDayDelivery": "Same day delivery",
+		"ordersBefore14": "Orders before 2 PM",
+		"freshnessGuarantee": "Freshness guarantee",
+		"satisfactionGuaranteed": "100% satisfaction guaranteed",
+		"securePayment": "Secure payment",
+		"sslEncryption": "SSL encryption",
+		"support247": "24/7 support",
+		"hereForYou": "We are here for you"
+	},
+	"home": {
+		"featured": "Featured",
+		"viewAll": "View all"
 	}
 }

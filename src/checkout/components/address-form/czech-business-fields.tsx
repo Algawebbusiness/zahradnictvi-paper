@@ -2,7 +2,7 @@
 
 import { useState, type FC } from "react";
 import { Building } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "@/lib/i18n";
 import { FieldError } from "@/checkout/views/saleor-checkout/address-form-fields";
 import { Input } from "@/ui/components/ui/input";
 import { Label } from "@/ui/components/ui/label";
