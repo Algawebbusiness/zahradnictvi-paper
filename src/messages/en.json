@@ -452,5 +452,32 @@
 	"home": {
 		"featured": "Featured",
 		"viewAll": "View all"
+	},
+	"bouquet": {
+		"title": "Create your own bouquet",
+		"subtitle": "Select flowers from our offer and create your own bouquet with AI visualization",
+		"selectFlowers": "Select flowers",
+		"yourBouquet": "Your bouquet",
+		"aiPreview": "AI visualization",
+		"add": "Add",
+		"total": "Total",
+		"generatePreview": "AI Preview",
+		"generating": "Generating...",
+		"addToCart": "Add to cart",
+		"clearBouquet": "Clear bouquet",
+		"emptyState": "Select flowers to start creating your bouquet",
+		"emptyPreview": "Select flowers and click \"AI Preview\" to generate a bouquet visualization",
+		"noProducts": "No products available",
+		"perPiece": "per piece",
+		"addedToCart": "Bouquet added to cart",
+		"flowersAdded": "flowers added",
+		"cartError": "Error adding to cart"
+	},
+	"blog": {
+		"title": "Our blog",
+		"subtitle": "Tips, guides and news from the world of flowers and gardening",
+		"noPosts": "No articles yet.",
+		"readMore": "Read more",
+		"backToBlog": "Back to blog"
 	}
 }

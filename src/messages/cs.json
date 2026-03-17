@@ -452,5 +452,32 @@
 	"home": {
 		"featured": "Doporučujeme",
 		"viewAll": "Zobrazit vše"
+	},
+	"bouquet": {
+		"title": "Tvorba vlastní kytice",
+		"subtitle": "Vyberte květiny z naší nabídky a vytvořte si vlastní kytici s AI vizualizací",
+		"selectFlowers": "Vyberte květiny",
+		"yourBouquet": "Vaše kytice",
+		"aiPreview": "AI vizualizace",
+		"add": "Přidat",
+		"total": "Celkem",
+		"generatePreview": "Náhled AI",
+		"generating": "Generuji...",
+		"addToCart": "Do košíku",
+		"clearBouquet": "Vymazat kytici",
+		"emptyState": "Vyberte květiny pro začátek tvorby kytice",
+		"emptyPreview": "Vyberte květiny a klikněte na \"Náhled AI\" pro vygenerování vizualizace kytice",
+		"noProducts": "Žádné produkty nejsou k dispozici",
+		"perPiece": "Kč / ks",
+		"addedToCart": "Kytice přidána do košíku",
+		"flowersAdded": "květin přidáno",
+		"cartError": "Chyba při přidávání do košíku"
+	},
+	"blog": {
+		"title": "Náš blog",
+		"subtitle": "Tipy, návody a novinky ze světa květin a zahradnictví",
+		"noPosts": "Zatím nemáme žádné články.",
+		"readMore": "Číst více",
+		"backToBlog": "Zpět na blog"
 	}
 }
